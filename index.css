@@ -1,0 +1,56 @@
+#note-list {
+    margin-top: 10px;
+  }
+  
+  #note-input {
+    margin-bottom: 5px;
+  }
+  
+ /* sticky note*/
+  .sticky-note {
+    width: 300px;
+    height: auto;
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+   /*  position: absolute; */
+    top: 50px;
+    left: 50px;
+   /*  z-index: 1000; */
+  }
+  
+  .sticky-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .close-btn {
+    cursor: pointer;
+  }
+  
+  .sticky-content {
+    min-height: 100px;
+  }
+  
+  
+  /* you need to define the fadeIn keyframe property for it to work */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+
+   /* Code that might be useful 
+
+ This will fade in the new added tasks using the animation property 
+   .note {
+    margin-bottom: 10px;
+    opacity: 0;
+    -webkit-animation: fadeIn .5s linear forwards;
+    -moz-animation: fadeIn .5s linear forwards;
+    animation: fadeIn .5s linear forwards;
+  }
+
+  */
