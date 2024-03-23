@@ -15,12 +15,22 @@
   <div id="announcement-input">
   <h2>Announcement board</h2>
 
- 
-  <!-- The input element for users to add an announcement -->
-  <input id="note-input" placeholder="New Note">
-  <!-- A button for adding ToDos -->
-  <button id="add-button" type="button">Add Note</button>
-</div>
+  <div class="grid-container">
+    <div class="left-column">
+        <label for="text">Title:</label>
+        <input id="note-input" placeholder="Title">
+     
+        <label for="text">Text:</label>
+        <input id="content-input" placeholder="Write the content of your announcement here">
+    </div>
+
+    <div class="right-column">
+      <button id="add-button" type="button">Add Note</button>
+      <button id="all-button" type="button">See all notes</button>
+    </div>
+      </div>
+      </div>
+
 
 
   <div id="note-list">

@@ -7,6 +7,50 @@
 
 
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto; /* Two columns */
+  gap: 10px; /* Gap between columns */
+}
+
+.left-column {
+  display: grid;
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 10px; /* Gap between rows */
+}
+
+label {
+  grid-column: 1; /* Position labels in the first column */
+}
+
+input {
+  grid-column: 2; /* Position inputs in the second column */
+}
+
+.right-column {
+  display: grid;
+  grid-template-rows: repeat(2, 50px);
+  gap: 10px;
+}
+
+
+#add-button,
+#all-button {
+  width: 200px; /* Set the desired width for the buttons */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 #note-list {
     margin: 20px;
     border: 2px solid black;
@@ -18,6 +62,10 @@
     margin-bottom: 5px;
   }
   
+  #content-input {
+    height: 150px; /* Adjust the height as needed */
+  }
+
  /* sticky note*/
   .sticky-note {
     width: 300px;
