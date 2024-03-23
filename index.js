@@ -44,14 +44,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //Add noteText to the div
  newStickyNote.appendChild(stickyHeader);
- newStickyNote .appendChild(stickyContent);
+ newStickyNote.appendChild(stickyContent);
 
 // Append noteList to the note-list div
   noteList.appendChild(newStickyNote );
+  
 };
 
 addButton.addEventListener('click', function () {
     addNote();
+    // Clear the input element by setting it to empty string.
+    noteInput.value = '';
   });
 });
 
