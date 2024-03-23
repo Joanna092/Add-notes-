@@ -41,16 +41,3 @@
     }
   }
 
-
-   /* Code that might be useful 
-
- This will fade in the new added tasks using the animation property 
-   .note {
-    margin-bottom: 10px;
-    opacity: 0;
-    -webkit-animation: fadeIn .5s linear forwards;
-    -moz-animation: fadeIn .5s linear forwards;
-    animation: fadeIn .5s linear forwards;
-  }
-
-  */
