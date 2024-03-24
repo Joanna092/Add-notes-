@@ -83,8 +83,10 @@ input {
   .sticky-header {
     display: flex;
     justify-content: flex-end;
+    text-align: center;
   }
   
+
   .close-btn {
     cursor: pointer;
   }
