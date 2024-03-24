@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Append noteList to the note-list div
   noteList.appendChild(newStickyNote );
-  
+ 
 };
 
 addButton.addEventListener('click', function () {

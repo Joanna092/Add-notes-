@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*input fields */
+
 #announcement-input {
   box-sizing: border-box;
   width: 50%;
@@ -39,25 +47,19 @@ input {
   width: 200px; /* Set the desired width for the buttons */
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/*Note list fields*/
 
 #note-list {
-    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 0 auto;
     border: 2px solid black;
     padding: 15px;
     height: 80vh;
+    grid-gap: 10px 10px;
   }
-  
+
+
   #note-input {
     margin-bottom: 5px;
   }
@@ -68,18 +70,16 @@ input {
 
  /* sticky note*/
   .sticky-note {
-    width: 300px;
-    height: auto;
-    background-color: yellow;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
-   /*  position: absolute; */
-    top: 50px;
-    left: 50px;
-   /*  z-index: 1000; */
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 300px;
+    min-height: 300px;
+    padding: 0.5em;
+    font-weight: 700;
+    border: 10px solid black;
   }
-  
+
+
   .sticky-header {
     display: flex;
     justify-content: flex-end;
@@ -87,10 +87,6 @@ input {
   
   .close-btn {
     cursor: pointer;
-  }
-  
-  .sticky-content {
-    min-height: 100px;
   }
   
   
