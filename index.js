@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Code placed here will run when the DOM content has loaded.
   var noteList = document.getElementById('note-list');
   var noteTitle = document.getElementById('note-title');
-  var noteInput = document.getElementById('note-input');
+  var contentInput = document.getElementById('content-input');
   var addButton = document.getElementById('add-button');
 
   var addNote = function() {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
  stickyHeader.setAttribute('class', 'sticky-header');
 
  var stickyTitle = document.createElement('h1');
-stickyTitle.innerHTML = 'Hello World!'
+stickyTitle.innerHTML = noteTitle.value
 
 //create a div for the content of the note
  var stickyContent = document.createElement('div');
@@ -53,7 +53,7 @@ stickyTitle.innerHTML = 'Hello World!'
  // Make the content non-editable.
  stickyContent.setAttribute('contenteditable', 'false');
  // Catch content from the input field 
- stickyContent.innerHTML = noteTitle.value;
+ stickyContent.innerHTML = contentInput.value;
 
 //Add noteText to the div
  newStickyNote.appendChild(stickyHeader);
@@ -68,6 +68,7 @@ addButton.addEventListener('click', function () {
     addNote();
     // Clear the input element by setting it to empty string.
     noteTitle.value = '';
+    contentInput.value = '';
   });
 });
 
