@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var addButton = document.getElementById('add-button');
 
   var addNote = function() {
+
+    if (!noteTitle.value.trim() || !contentInput.value.trim()) {
+      alert("Please enter both title and content.");
+      return; // Exit the function early if validation fails
+    }
    
  //Create a div for adding new Note
  var newStickyNote = document.createElement('div');

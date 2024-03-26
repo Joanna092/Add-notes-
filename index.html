@@ -14,21 +14,22 @@
 
   <div id="announcement-input">
   <h2>Announcement board</h2>
-
+<form>
   <div class="grid-container">
     <div class="left-column">
         <label for="text">Title:</label>
-        <input id="note-title" placeholder="Title">
+        <input id="note-title" placeholder="Title" required>
      
         <label for="text">Text:</label>
-        <input id="content-input" placeholder="Write the content of your announcement here">
+        <input id="content-input" placeholder="Write the content of your announcement here" required>
     </div>
 
     <div class="right-column">
-      <button id="add-button" type="button">Add Note</button>
+      <button id="add-button" type="submit">Add Note</button>
       <button id="all-button" type="button">See all notes</button>
     </div>
       </div>
+    </form>
       </div>
 
 
