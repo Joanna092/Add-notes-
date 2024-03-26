@@ -1,11 +1,3 @@
- //Create a child h1 element for the sticky note header NEW
- //var newH1 = document.createElement('h1');
- //var newTextNode = document.createTextNode('Hello World!');
- //newH1.appendChild(newTextNode);
- //stickyHeader.appendChild(newH1)
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
   // Code placed here will run when the DOM content has loaded.
   var noteList = document.getElementById('note-list');
