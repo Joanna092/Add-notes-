@@ -59,6 +59,13 @@ input {
     grid-gap: 10px 10px;
   }
 
+  @media (max-width: 600px) { 
+    #note-list {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+  }
+
 
   #note-input {
     margin-bottom: 5px;
