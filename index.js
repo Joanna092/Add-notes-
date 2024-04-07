@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var contentInput = document.getElementById("content-input");
   var addButton = document.getElementById("add-button");
 
+
   var addNote = function () {
     if (!noteTitle.value.trim() || !contentInput.value.trim()) {
       alert("Please enter both title and content.");
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Make the content non-editable.
     stickyContent.setAttribute("contenteditable", "false");
     // Catch content from the input field
-    stickyContent.innerHTML = contentInput.value;
+    stickyContent.innerText = contentInput.value;
 
     //Add noteText to the div
     newStickyNote.appendChild(stickyHeader);
@@ -67,5 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
       contentInput.value = "";
     }
   });
+
 });
 
