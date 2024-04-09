@@ -69,5 +69,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  //code for the popup
+
+  const seeMoreBtn = document.getElementById('seeMoreBtn');
+  const popupContainer = document.getElementById('popupContainer');
+  const closeBtn = document.getElementById('closeBtn');
+  const userNote = document.getElementById('userNote');
+
+  // Replace this sample note with your actual user note
+  const sampleNote = "This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he "
+
+  seeMoreBtn.addEventListener('click', function() {
+    // Set the user note content
+    userNote.textContent = sampleNote;
+    // Show the popup
+    popupContainer.classList.add('show');
+  });
+
+  closeBtn.addEventListener('click', function() {
+    // Hide the popup when close button is clicked
+    popupContainer.classList.remove('show');
+  });
+
+
+
 });
 
