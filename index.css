@@ -142,4 +142,7 @@ input {
   .popupContainer.show {
     display: block;
   }
-  
+
+  #seeMoreBtn {
+    float: right;
+  }

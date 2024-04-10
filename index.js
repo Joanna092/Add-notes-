@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var noteTitle = document.getElementById("note-title");
   var contentInput = document.getElementById("content-input");
   var addButton = document.getElementById("add-button");
-
+ 
 
   var addNote = function () {
     if (!noteTitle.value.trim() || !contentInput.value.trim()) {
@@ -52,13 +52,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // Catch content from the input field
     stickyContent.innerText = contentInput.value;
 
+    //Create a see more button
+    var seeMoreBtn = document.createElement("button");
+    seeMoreBtn.setAttribute("id", "seeMoreBtn");
+    seeMoreBtn.innerText = "See more";
+
     //Add noteText to the div
     newStickyNote.appendChild(stickyHeader);
     newStickyNote.appendChild(stickyTitle);
     newStickyNote.appendChild(stickyContent);
+    newStickyNote.appendChild(seeMoreBtn);
 
     // Append noteList to the note-list div
     noteList.appendChild(newStickyNote);
+
+     // Event listener for "See more" button inside the addNote function
+     seeMoreBtn.addEventListener("click", function () {
+      const userNote = document.getElementById('userNote');
+      // Set the user note content
+      userNote.textContent = stickyContent.innerText; // Access stickyContent here
+      // Show the popup
+      popupContainer.classList.add('show');
+    });
+
   };
 
   addButton.addEventListener("click", function () {
@@ -69,29 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  //code for the popup
-
-  const seeMoreBtn = document.getElementById('seeMoreBtn');
-  const popupContainer = document.getElementById('popupContainer');
-  const closeBtn = document.getElementById('closeBtn');
-  const userNote = document.getElementById('userNote');
-
-  // Replace this sample note with your actual user note
-  const sampleNote = "This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he This is a sample user note. Replace it with the actual user's notee title This will be the content of the first note. I will give it more text, so that people know what can be happening here. This is not a title, but the content. he he he "
-
-  seeMoreBtn.addEventListener('click', function() {
-    // Set the user note content
-    userNote.textContent = sampleNote;
-    // Show the popup
-    popupContainer.classList.add('show');
-  });
-
   closeBtn.addEventListener('click', function() {
-    // Hide the popup when close button is clicked
     popupContainer.classList.remove('show');
   });
-
-
-
 });
-
