@@ -16,6 +16,7 @@
   display: grid;
   grid-template-columns: auto auto; /* Two columns */
   gap: 10px; /* Gap between columns */
+  margin-bottom: 50px;
 }
 
 .left-column {
