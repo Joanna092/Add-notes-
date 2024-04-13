@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
      seeMoreBtn.addEventListener("click", function () {
       const userNote = document.getElementById('userNote');
       // Set the user note content
-      userNote.textContent = stickyContent.innerText; // Access stickyContent here
+      userNote.innerHTML= stickyContent.innerHTML; // Access stickyContent here
       // Show the popup
       popupContainer.classList.add('show');
     });
