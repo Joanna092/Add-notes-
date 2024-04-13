@@ -76,7 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
      // Event listener for "See more" button inside the addNote function
      seeMoreBtn.addEventListener("click", function () {
       const userNote = document.getElementById('userNote');
+      const userTitleNote = document.getElementById('userTitleNote');
       // Set the user note content
+      userTitleNote.innerHTML= stickyTitle.innerHTML;
       userNote.innerHTML= stickyContent.innerHTML; // Access stickyContent here
       // Show the popup
       popupContainer.classList.add('show');
