@@ -42,6 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var stickyTitle = document.createElement("h1");
     stickyTitle.innerHTML = noteTitle.value;
 
+    //Create wrapper
+    var stickyWrapper = document.createElement("div");
+    stickyWrapper.setAttribute("class", "sticky-content-wrapper");
+
+
+    
     //create a div for the content of the note
     var stickyContent = document.createElement("div");
 
@@ -59,8 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Add noteText to the div
     newStickyNote.appendChild(stickyHeader);
-    newStickyNote.appendChild(stickyTitle);
-    newStickyNote.appendChild(stickyContent);
+    newStickyNote.appendChild(stickyWrapper);
+    stickyWrapper.appendChild(stickyTitle);
+    stickyWrapper.appendChild(stickyContent);
     newStickyNote.appendChild(seeMoreBtn);
 
     // Append noteList to the note-list div
