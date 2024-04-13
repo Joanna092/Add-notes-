@@ -10,13 +10,14 @@
   width: 50%;
   margin: 0 auto;
   text-align: center;
+  height: 35vh; 
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: auto auto; /* Two columns */
   gap: 10px; /* Gap between columns */
-  margin-bottom: 50px;
+  /*margin-bottom: 50px; */
 }
 
 .left-column {
@@ -52,7 +53,7 @@ input {
   margin: 0 auto;
   border: 2px solid black;
   padding: 15px;
-  height: 80vh;
+  min-height: 60vh; 
   grid-gap: 10px 10px;
 }
 
