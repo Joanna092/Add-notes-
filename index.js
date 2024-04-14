@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var noteTitle = document.getElementById("note-title");
   var contentInput = document.getElementById("content-input");
   var addButton = document.getElementById("add-button");
+  var bodyOverlay = document.createElement("div"); // Create overlay element
+  bodyOverlay.classList.add("overlay"); // Add overlay class to the element
+  document.body.appendChild(bodyOverlay); // Append overlay to body
  
 
   var addNote = function () {
@@ -81,7 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
       userTitleNote.innerHTML= stickyTitle.innerHTML;
       userNote.innerHTML= stickyContent.innerHTML; // Access stickyContent here
       // Show the popup
-      popupContainer.classList.add('show');
+       popupContainer.style.display = "block";
+       bodyOverlay.style.display = "block"; // Show overlay
     });
 
   };
@@ -95,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   closeBtn.addEventListener('click', function() {
-    popupContainer.classList.remove('show');
+    popupContainer.style.display = "none";
+    bodyOverlay.style.display = "none"; // Show overlay
   });
 });
