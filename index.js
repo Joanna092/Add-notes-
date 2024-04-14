@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       addNote();
       noteTitle.value = "";
       contentInput.value = "";
+      photoInput.value = []
     }
   });
 
