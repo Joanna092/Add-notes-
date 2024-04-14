@@ -7,12 +7,21 @@ document.addEventListener("DOMContentLoaded", function () {
   var bodyOverlay = document.createElement("div"); // Create overlay element
   bodyOverlay.classList.add("overlay"); // Add overlay class to the element
   document.body.appendChild(bodyOverlay); // Append overlay to body
+  var photoInput = document.getElementById("photo-input");
  
 
   var addNote = function () {
     if (!noteTitle.value.trim() || !contentInput.value.trim()) {
       alert("Please enter both title and content.");
       return; // Exit the function early if validation fails
+    }
+
+    if (photoInput.files && photoInput.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        userPhoto.src = e.target.result;
+      };
+      reader.readAsDataURL(photoInput.files[0]);
     }
 
     //Create a div for adding new Note
@@ -78,6 +87,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
      // Event listener for "See more" button inside the addNote function
      seeMoreBtn.addEventListener("click", function () {
+
+      if (photoInput.files && photoInput.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          userPhoto.src = e.target.result;
+        };
+        reader.readAsDataURL(photoInput.files[0]);
+      }
+
+
       const userNote = document.getElementById('userNote');
       const userTitleNote = document.getElementById('userTitleNote');
       // Set the user note content
