@@ -128,6 +128,11 @@ textarea {
   overflow: hidden;
 }
 
+.user-photo {
+  width: 50%;
+  display: none;
+}
+
 #seeMoreBtn {
   align-self: flex-end;
   margin-top: auto;
