@@ -9,46 +9,73 @@ body {
 }
 
 /* Input fields */
-#announcement-input {
-  box-sizing: border-box;
-  width: 50%;
+
+.announcement-input {
+  max-width: 600px;
   margin: 0 auto;
-  text-align: center;
-  height: 35vh; 
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333333;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto; /* Two columns */
-  gap: 10px; /* Gap between columns */
-  /*margin-bottom: 50px; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1px;
 }
 
 .left-column {
-  display: grid;
-  grid-template-rows: auto auto; /* Two rows */
-  gap: 10px; /* Gap between rows */
-}
-
-label {
-  grid-column: 1; /* Position labels in the first column */
-  text-align: right;
-}
-
-input {
-  grid-column: 2; /* Position inputs in the second column */
+  display: flex;
+  flex-direction: column;
 }
 
 .right-column {
-  display: grid;
-  grid-template-rows: repeat(2, 50px);
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#add-button,
-#all-button {
-  width: 200px; /* Set the desired width for the buttons */
+.input-label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #666666;
 }
+
+.input-field,
+.file-input {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-button,
+.all-button {
+  width: 200px;
+  margin-bottom: 10px;
+  padding: 10px 50px; 
+  background-color: grey;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover,
+.all-button:hover {
+  background-color: black;
+}
+
+
 
 /* Note list fields */
 #note-list {
@@ -181,3 +208,6 @@ textarea {
   display: none; /* Hide by default */
   z-index: 1000; /* Ensure it's below the popup */
 }
+
+
+
