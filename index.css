@@ -162,11 +162,24 @@ textarea {
   display: none;
 }
 
-#seeMoreBtn {
-  align-self: flex-end;
-  margin-top: auto;
-  float: right;
+.seeMoreBtn, #seeMoreBtn, #closeBtn {
+  background-color: #333; /* Match the background color of the website */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 9px 32px; /* Larger padding for a modern look */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
 }
+
+.seeMoreBtn:hover, #seeMoreBtn:hover, #closeBtn:hover {
+  background-color: #555; /* Darken the background color on hover */
+}
+
 
 /* Popup container */
 .popupContainer {
