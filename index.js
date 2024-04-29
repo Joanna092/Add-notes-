@@ -112,22 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
     popupContainer.style.display = "block";
     bodyOverlay.style.display = "block"; // Show overlay
   });
-  
-  /*
-seeMoreBtn.addEventListener("click", function () {
-
-  const userNote = document.getElementById("userNote");
-  const userTitleNote = document.getElementById("userTitleNote");
-  userTitleNote.innerHTML = stickyTitle.innerHTML;
-  userNote.innerHTML = stickyContent.innerHTML;
-
-  userPhoto.src = newStickyNote.querySelector(".user-photo").src;
-
-  popupContainer.style.display = "block";
-  bodyOverlay.style.display = "block"; 
-});
-*/
-
 
   };
 
