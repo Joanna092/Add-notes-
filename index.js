@@ -129,3 +129,17 @@ document.addEventListener("DOMContentLoaded", function () {
     bodyOverlay.style.display = "none"; // Show overlay
   });
 });
+
+
+function toggleForms() {
+  var addForm = document.getElementById("add-form");
+  var searchForm = document.getElementById("search-form");
+
+  if (addForm.style.display === "none") {
+    addForm.style.display = "block";
+    searchForm.style.display = "none";
+  } else {
+    addForm.style.display = "none";
+    searchForm.style.display = "block";
+  }
+}
