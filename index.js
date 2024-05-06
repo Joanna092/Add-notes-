@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   bodyOverlay.classList.add("overlay"); // Add overlay class to the element
   document.body.appendChild(bodyOverlay); // Append overlay to body
   var photoInput = document.getElementById("photo-input");
+  var searchButton = document.getElementById("search-button");
+
 
   var addNote = function () {
     if (!noteTitle.value.trim() || !contentInput.value.trim()) {
@@ -124,6 +126,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+
+// Function to search through notes
+var searchNotes = function () {
+  var searchInput = document.getElementById("search-input").value.toLowerCase(); // Get the search query and convert to lowercase
+  var notes = document.querySelectorAll(".sticky-note"); // Get all sticky notes
+  notes.forEach(function (note) { // Loop through each note
+    var title = note.querySelector("h1").innerText.toLowerCase(); // Get the note title and convert to lowercase
+    var content = note.querySelector(".sticky-content").innerText.toLowerCase(); // Get the note content and convert to lowercase
+    // Check if either the title or content of the note contains the search query
+    if (title.includes(searchInput) || content.includes(searchInput)) {
+      note.style.display = "block"; // If found, display the note
+    } else {
+      note.style.display = "none"; // If not found, hide the note
+    }
+  });
+};
+
+searchButton.addEventListener("click", searchNotes); // Add event listener to search button
+
+
+
+
+
   closeBtn.addEventListener("click", function () {
     popupContainer.style.display = "none";
     bodyOverlay.style.display = "none"; // Show overlay
@@ -143,3 +168,5 @@ function toggleForms() {
     searchForm.style.display = "block";
   }
 }
+
+
