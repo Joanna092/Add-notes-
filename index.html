@@ -11,27 +11,6 @@
 
 <body>
 
-<!--
-  <div id="announcement-input" class="announcement-input">
-    <h2 class="announcement-heading">Announcement Board</h2>
-    <form class="announcement-form">
-      <div class="input-group">
-        <input id="note-title" class="input-field" placeholder="Title" required>
-      </div>
-      <div class="input-group">
-        <textarea id="content-input" class="input-field" placeholder="Write the content of your announcement here" required></textarea>
-      </div>
-      <div class="input-group">
-        <input type="file" id="photo-input" class="file-input" accept="image/*">
-      </div>
-      <div class="button-group">
-        <button id="add-button" class="add-button" type="submit">Add Note</button>
-        <button id="all-button" class="all-button" type="button" onclick="window.location.href = 'allnotes.html';">See All Notes</button>
-      </div>
-    </form>
-  </div>
--->
-
 <div id="announcement-input" class="announcement-input">
   <h2 class="announcement-heading">Announcement Board</h2>
   <form id="add-form" class="announcement-form">
@@ -63,14 +42,15 @@
   
   <div id="note-list">
 
-    <div class="sticky-note">a
+    <!--
+    <div class="sticky-note">
       <div class="sticky-header">
         <span class="close-btn">×</span>
       </div>
 
       <div class="sticky-content-wrapper">
 
-      <h1>title</h1> <!-- new -->
+      <h1>title</h1> 
       <div class="sticky-content" contenteditable="false">
         This will be the content of the first note. 
 
@@ -96,6 +76,8 @@
       </div>
       <button id="seeMoreBtn">See More</button>
     </div>
+-->
+
   </div>
 
  
